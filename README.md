@@ -4,7 +4,7 @@ This is a full-stack test, focusing mostly on the front-end results. This reposi
 
 Start by following the quick start steps.
 
-Read the full specification [here](http://bit.ly/fv-dev-test).
+Read the full specification [here](https://bit.ly/fv-dev-test).
 
 ### Quick Start (Docker)
 
