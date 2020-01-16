@@ -16,7 +16,7 @@
     rgb(136, 124, 202) 0%,
     rgb(53, 60, 155) 100%
   );
-  // --light-color: #dedede;
+
   --light-color: linear-gradient(
     180deg,
     rgb(250, 250, 250) 0%,
@@ -57,28 +57,18 @@
     height: 30px;
     width: 100px;
     background: var(--dark-color);
-    // background: blue;
     color: #fff;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
   }
 
   &-next:hover {
     background: var(--dark-color-rev);
-    // background: red;
   }
 
   &-next::after {
     content: " \003E";
     color: #fff;
   }
-
-  // &-secondary {
-  //   background: var(--dark-color);
-  //   color: #fff;
-  // }
 }
 
 .form {
@@ -95,7 +85,6 @@
   box-shadow: 3px 5px 50px -12px rgba(0, 0, 0, 0.75);
 
   &-panel {
-    // display: none;
     height: 0px;
     margin-bottom: 4px;
     div {
@@ -132,7 +121,6 @@
     border: none;
     border-radius: 7px;
     padding: 0.5rem 1rem;
-    // margin: 4px;
 
     &-2 {
       margin-bottom: 4px;
@@ -152,10 +140,6 @@
       padding: 0.7rem;
       width: 100%;
       box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.4);
-    }
-
-    input:focus {
-      // border: 1px solid var(--dark-color);
     }
 
     select,
@@ -183,8 +167,6 @@
       -moz-transition: all 0.3s ease-in-out;
       -ms-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
-      // border: 1px solid var(--dark-color);
-      // outline: none;
     }
 
     input:focus,
