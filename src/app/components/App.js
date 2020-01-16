@@ -1,12 +1,13 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
+import Form from "./layout/Form";
 
 export default class App extends Component {
   render() {
     return (
-      <>
-        <h1>App</h1>
-        <p>Edit this file, located in src/app/components/App.js</p>
-      </>
+      <div className="container">
+        <h3 className="candidate">Sean West | Test Submission</h3>
+        <Form />
+      </div>
     );
   }
 }

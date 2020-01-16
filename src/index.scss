@@ -1,1 +1,202 @@
 @import "style/vars";
+
+:root {
+  --primary-color: linear-gradient(
+    0deg,
+    rgba(251, 193, 1, 1) 0%,
+    rgba(238, 165, 13, 1) 100%
+  );
+  --dark-color: linear-gradient(
+    332deg,
+    rgb(53, 60, 155) 0%,
+    rgb(136, 124, 202) 100%
+  );
+  --dark-color-rev: linear-gradient(
+    332deg,
+    rgb(136, 124, 202) 0%,
+    rgb(53, 60, 155) 100%
+  );
+  // --light-color: #dedede;
+  --light-color: linear-gradient(
+    180deg,
+    rgb(250, 250, 250) 0%,
+    rgba(193, 193, 193, 1) 100%
+  );
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: #d2e1ff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.candidate {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.btn {
+  border-radius: 8px;
+  border-style: none;
+
+  &-next {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 30px;
+    width: 100px;
+    background: var(--dark-color);
+    // background: blue;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+  }
+
+  &-next:hover {
+    background: var(--dark-color-rev);
+    // background: red;
+  }
+
+  &-next::after {
+    content: " \003E";
+    color: #fff;
+  }
+
+  // &-secondary {
+  //   background: var(--dark-color);
+  //   color: #fff;
+  // }
+}
+
+.form {
+  max-width: 650px;
+  background-color: #fff;
+  padding: 0.25rem;
+  padding-bottom: 0.05rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-shadow: 3px 5px 50px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 5px 50px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 5px 50px -12px rgba(0, 0, 0, 0.75);
+
+  &-panel {
+    // display: none;
+    height: 0px;
+    margin-bottom: 4px;
+    div {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+
+    &-open {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 8px 8px;
+      background: var(--light-color);
+      border-radius: 7px;
+      margin-bottom: 4px;
+
+      div {
+        background-color: var(--light-color);
+        padding: 0.25rem;
+        width: 223px;
+      }
+    }
+  }
+  .fieldset {
+    background: var(--primary-color);
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.64);
+    text-align: left;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    padding: 0.5rem 1rem;
+    // margin: 4px;
+
+    &-2 {
+      margin-bottom: 4px;
+    }
+  }
+  .input {
+    label {
+      background-color: var(--light-color);
+      text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.64);
+
+      font-weight: 500;
+    }
+    input {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 0.7rem;
+      width: 100%;
+      box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    input:focus {
+      // border: 1px solid var(--dark-color);
+    }
+
+    select,
+    option {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 76%;
+      padding: 0.7rem;
+      background-color: var(--light-color);
+      box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.4);
+      color: #747272;
+    }
+
+    textarea {
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 0.7rem;
+      width: 25rem;
+      height: 10rem;
+      outline: none;
+      box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.4);
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      // border: 1px solid var(--dark-color);
+      // outline: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: rgba(136, 124, 202, 0.733);
+      box-shadow: inset 1px 2px 8px rgb(136, 124, 202);
+      outline: none;
+    }
+    &-3 {
+      padding-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
